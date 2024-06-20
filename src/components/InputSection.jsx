@@ -50,24 +50,26 @@ function InputSection({
   return (
     <main>
       <section className='bg-input-page bg-cover bg-center w-full lg:h-[calc(100vh-60px)] border-y pt-10 lg:pt-0  border-secondary-color animate-slideIn flex items-center'>
-        <div className='bg-[url("/src/img/white-line.png")] bg-no-repeat lg:bg-cover h-[80%] w-full text-sm md:text-base text-center text-primary-dark'>
-          <Wrapper>
-            <div className='flex flex-col md:flex-row justify-center items-center flex-wrap gap-y-28'>
-              <div className='w-full lg:w-1/2 flex flex-col items-center'>
-                <ColorPicker options={options} setters={setters} />
-                <InputForm hexColor={hexColor} />
-              </div>
+        <div className='relative h-[80%] w-full text-sm md:text-base text-center text-primary-dark'>
+          <div className='bg-custom-gradient absolute bottom-0 right-0 left-0 top-[12%]'>
+            <Wrapper>
+              <div className='flex flex-col md:flex-row justify-center items-center flex-wrap gap-y-28'>
+                <div className='w-full lg:w-1/2 flex flex-col items-center'>
+                  <ColorPicker options={options} setters={setters} />
+                  <InputForm hexColor={hexColor} />
+                </div>
 
-              <div className='lg:w-1/2'>
-                <TextArea
-                  handleChange={handleChange}
-                  handleClick={handleClick}
-                  formData={formData}
-                  usageEmpty={usageEmpty}
-                />
+                <div className='lg:w-1/2'>
+                  <TextArea
+                    handleChange={handleChange}
+                    handleClick={handleClick}
+                    formData={formData}
+                    usageEmpty={usageEmpty}
+                  />
+                </div>
               </div>
-            </div>
-          </Wrapper>
+            </Wrapper>
+          </div>
         </div>
       </section>
     </main>

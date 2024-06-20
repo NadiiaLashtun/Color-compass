@@ -17,6 +17,8 @@ export default {
         "main-page": 'url("/src/img/main-section-bg.jpg")',
         "input-page": 'url("/src/img/input-section-bg.png")',
         "result-page": 'url("/src/img/results-section-bg.png")',
+        "custom-gradient":
+          "linear-gradient(to right, #8E216E 0%, #E66F74 20%, #EBC0C1 38%, #ffffff 50%, #ffffff 100%)",
       },
 
       fontFamily: {
