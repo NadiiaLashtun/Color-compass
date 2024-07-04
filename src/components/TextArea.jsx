@@ -1,6 +1,31 @@
 import { Link } from "react-router-dom";
 
-function TextArea({ handleClick, handleChange, formData, usageEmpty }) {
+function TextArea({ handleClick, handleChange, formData, usageEmpty, hexColor, rgbColor, hslColor}) {
+
+  const RGBColor = ({ rgbColor }) => {
+    const { r, g, b } = rgbColor;
+
+    return (
+      <span className="text-black-600">
+        <span className="text-red-600"> {r}</span>
+        <span className="text-green-600"> {g}</span>
+        <span className="text-blue-600"> {b}</span>
+      </span>
+    );
+  };
+  
+  const HSLColor = ({ hslColor }) => {
+    const { h, s, l } = hslColor;
+  
+    return (
+      <span className="text-black">
+        <span className="text-purple-600">{h}</span>, 
+        <span className="text-green-600"> {s}%</span>, 
+        <span className="text-orange-600"> {l}%</span>
+      </span>
+    );
+  };
+
   return (
     <div className='flex flex-col space-y-2 py-20 mb-8 lg:bg-transparent'>
       <h1 className='font-caption text-5xl md:text-7xl sticky -mt-28 text-brand-red'>
@@ -11,11 +36,13 @@ function TextArea({ handleClick, handleChange, formData, usageEmpty }) {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
         mattis tortor ut tortor cursus, ac maximus tortor.
       </p>
-      <div className='pb-9'>
-        <p className='text-brand-green'>HEX: #b19cd9</p>
-        <p className='text-brand-green'>RGB: rgb(177, 156, 217)</p>
-        <p className='text-brand-green'>HSL: hsl(261, 45%, 73%)</p>
-      </div>
+
+
+      <p className='text-black-600'><u>HEX:</u> {hexColor} </p>
+      <p className='text-black-600'><u>RGB:</u> <RGBColor rgbColor={rgbColor} /></p>
+      <p className='text-black-600'><u>HSL:</u> <HSLColor hslColor={hslColor} /></p>
+
+
       <label
         className='block text-base font-semibold mb-1 w-2/3 mx-auto'
         htmlFor='usage'

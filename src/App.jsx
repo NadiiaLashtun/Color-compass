@@ -19,6 +19,8 @@ const groq = new Groq({
 
 function App() {
   const [hexColor, setHexColor] = useState('#f00');
+  const [rgbColor, setRgbColor] = useState({ r: 255, g: 0, b: 0 });
+  const [hslColor, setHslColor] = useState({ h: 0, s: 100, l: 50 });
   const [usageEmpty, setUsageEmpty] = useState(false);
   const [trigger, setTrigger] = useState(false);
   const [buttonClicked, setButtonClicked] = useState(false);
@@ -66,6 +68,8 @@ function App() {
     () => ({
       onChangeColor(color) {
         setHexColor(color.hexString);
+        setRgbColor(color.rgb);
+        setHslColor(color.hsl);
       },
     }),
     []
@@ -99,6 +103,8 @@ function App() {
                 handleClick={handleClick}
                 formData={formDataRef.current}
                 hexColor={hexColor}
+                rgbColor={rgbColor}
+                hslColor={hslColor}
                 usageEmpty={usageEmpty}
               />
             }

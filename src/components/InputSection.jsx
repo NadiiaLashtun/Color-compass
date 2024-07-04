@@ -26,6 +26,8 @@ function InputSection({
   handleChange,
   formData,
   hexColor,
+  rgbColor,
+  hslColor,
   handleClick,
   usageEmpty,
 }) {
@@ -58,14 +60,18 @@ function InputSection({
                 <InputForm hexColor={hexColor} />
               </div>
 
-              <div className='lg:w-1/2'>
-                <TextArea
-                  handleChange={handleChange}
-                  handleClick={handleClick}
-                  formData={formData}
-                  usageEmpty={usageEmpty}
-                />
-              </div>
+
+            <div className='md:grow text-sm md:text-base flex flex-col items-center space-y-1 text-center text-primary-dark lg:w-1/2 block w-full h-full'>
+              <TextArea
+                handleChange={handleChange}
+                handleClick={handleClick}
+                formData={formData}
+                usageEmpty={usageEmpty}
+                hexColor={hexColor}
+                rgbColor={rgbColor}
+                hslColor={hslColor}
+              />
+
             </div>
           </Wrapper>
         </div>
