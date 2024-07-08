@@ -28,6 +28,8 @@ function InputSection({
   handleChange,
   formData,
   hexColor,
+  rgbColor,
+  hslColor,
   handleClick,
   usageEmpty,
 }) {
@@ -79,6 +81,9 @@ function InputSection({
                   handleClick={handleClick}
                   formData={formData}
                   usageEmpty={usageEmpty}
+                  hexColor={hexColor}
+                  rgbColor={rgbColor}
+                  hslColor={hslColor}
                 />
               </div>
             </div>
