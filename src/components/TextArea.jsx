@@ -1,50 +1,63 @@
 import { Link } from "react-router-dom";
 
-function TextArea({ handleClick, handleChange, formData, usageEmpty, hexColor, rgbColor, hslColor}) {
-
+function TextArea({
+  handleClick,
+  handleChange,
+  formData,
+  usageEmpty,
+  hexColor,
+  rgbColor,
+  hslColor,
+}) {
   const RGBColor = ({ rgbColor }) => {
     const { r, g, b } = rgbColor;
 
     return (
-      <span className="text-black-600">
-        <span className="text-red-600"> {r}</span>
-        <span className="text-green-600"> {g}</span>
-        <span className="text-blue-600"> {b}</span>
+      <span className='text-black-600'>
+        <span className='text-red-600'> {r}</span>
+        <span className='text-green-600'> {g}</span>
+        <span className='text-blue-600'> {b}</span>
       </span>
     );
   };
-  
+
   const HSLColor = ({ hslColor }) => {
     const { h, s, l } = hslColor;
-  
+
     return (
-      <span className="text-black">
-        <span className="text-purple-600">{h}</span>, 
-        <span className="text-green-600"> {s}%</span>, 
-        <span className="text-orange-600"> {l}%</span>
+      <span className='text-black'>
+        <span className='text-purple-600'>{h}</span>,
+        <span className='text-green-600'> {s}%</span>,
+        <span className='text-orange-600'> {l}%</span>
       </span>
     );
   };
 
   return (
-    <div className='flex flex-col space-y-2 py-20 mb-8 lg:bg-transparent'>
-      <h1 className='font-caption text-5xl md:text-7xl sticky -mt-28 text-brand-red'>
-        Title
+    <>
+      <h1 className='absolute -top-9 lg:-top-2 xl:-top-4 left-[50%] lg:left-[72%] -translate-x-1/2 font-caption text-3xl sm:text-4xl md:text-5xl xl:text-6xl text-brand-red'>
+        Choose your color
       </h1>
 
-      <p className='px-7 pt-7 py-3 w-3/4 mx-auto my-auto'>
+      <p className='w-[80%] mx-auto my-auto pt-9 lg:pt-5'>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
         mattis tortor ut tortor cursus, ac maximus tortor.
       </p>
 
-
-      <p className='text-black-600'><u>HEX:</u> {hexColor} </p>
-      <p className='text-black-600'><u>RGB:</u> <RGBColor rgbColor={rgbColor} /></p>
-      <p className='text-black-600'><u>HSL:</u> <HSLColor hslColor={hslColor} /></p>
-
+      <div className='pb-3 xl:pb-9'>
+        <p>
+          <u>HEX:</u> {hexColor}
+        </p>
+        <p>
+          <u>RGB:</u> <RGBColor rgbColor={rgbColor} />
+        </p>
+        <p>
+          <u>HSL:</u> <HSLColor hslColor={hslColor} />
+        </p>
+      </div>
 
       <label
-        className='block text-base font-semibold mb-1 w-2/3 mx-auto'
+        className='block text-base font-semibold w-3/4 mx-auto'
         htmlFor='usage'
       >
         Describe where do you plan to use this color?
@@ -52,7 +65,7 @@ function TextArea({ handleClick, handleChange, formData, usageEmpty, hexColor, r
       <textarea
         id='usage'
         name='usage'
-        className='w-2/3 max-h-48 px-3 py-2 resize-none overflow-y-auto border border-primary-white rounded-[20px] shadow-shape focus:outline-none mx-auto bg-primary-color'
+        className='w-[80%] max-h-48 px-3 py-2 resize-none overflow-y-auto border border-primary-white rounded-[20px] shadow-shape focus:outline-none mx-auto bg-primary-color'
         rows='4'
         onChange={handleChange}
         value={formData.usage}
@@ -66,7 +79,7 @@ function TextArea({ handleClick, handleChange, formData, usageEmpty, hexColor, r
       >
         Get Recommendations
       </Link>
-    </div>
+    </>
   );
 }
 
