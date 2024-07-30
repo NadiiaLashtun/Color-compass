@@ -35,9 +35,9 @@ function TextArea({
 
   return (
     <>
-      <h1 className='absolute -top-9 lg:-top-2 xl:-top-4 left-[50%] lg:left-[72%] -translate-x-1/2 font-caption text-3xl sm:text-4xl md:text-5xl xl:text-6xl text-brand-red'>
+      <h2 className='absolute -top-9 lg:-top-2 xl:-top-4 left-[50%] lg:left-[72%] -translate-x-1/2 font-caption text-3xl sm:text-4xl md:text-5xl xl:text-6xl text-brand-red'>
         Choose your color
-      </h1>
+      </h2>
 
       <p className='w-[80%] mx-auto my-auto pt-9 lg:pt-5'>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus

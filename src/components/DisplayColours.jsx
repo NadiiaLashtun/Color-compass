@@ -1,15 +1,12 @@
 function DisplayColours({ color }) {
   return (
-    <div className="mx-5 px-5 flex">
-      <div className="text-brand-light-green w-1/4 font-bold">
-      <p className="flex flex-col items-start text-left">{color.hex}</p>
-      <p className="flex flex-col items-start text-left pb-4">{color.name}</p>
+    <div className='flex gap-4'>
+      <div className='text-brand-light-green w-1/5 font-semibold'>
+        <p>
+          {color.hex} <br /> {color.name}
+        </p>
       </div>
-      <div className="w-3/4">
-      <p className="flex flex-col pb-4">
-        {color.description}
-      </p>
-      </div>
+      <div className='w-4/5'> {color.description}</div>
     </div>
   );
 }
