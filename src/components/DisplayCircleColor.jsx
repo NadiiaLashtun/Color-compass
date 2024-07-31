@@ -1,10 +1,9 @@
 import { setContrastText } from "../utils/setContrastText";
 
 function DisplayCircleColour({ hex }) {
-  console.log(hex);
   return (
     <div
-      className={`rounded-full px-2 py-7 w-[85px] h-[85px] shadow-shape content-center`}
+      className={`rounded-full w-full p-2 sm:py-7 sm:w-[85px] sm:h-[85px] shadow-shape content-center`}
       style={{
         backgroundColor: hex,
         color: setContrastText(hex),
