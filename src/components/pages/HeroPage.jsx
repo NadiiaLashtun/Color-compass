@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom";
-import Wrapper from "./Wrapper";
+import Wrapper from "../UI/Wrapper";
 import CompassArrow from "/src/img/compass-arrow.svg";
 import CompassCircle from "/src/img/compass-circle.svg";
 
 function MainSection() {
   return (
     <main>
-      <section className='bg-main-page bg-cover bg-center w-full h-[calc(100vh-60px)] border-y border-secondary-color animate-slideIn'>
+      <section className='bg-main-page bg-cover bg-center w-full h-[calc(100vh-60px)]  animate-slideIn'>
         <Wrapper>
           <div className='relative h-[calc(100vh-60px)] flex justify-center items-center'>
-            <div className='text-sm md:text-base flex flex-col items-center space-y-1 text-center text-primary-dark'>
+            <div className=' flex flex-col items-center space-y-1'>
               <p>Lorem ipsum</p>
               <h1 className='font-caption text-6xl md:text-8xl lg:text-[110px] text-brand-light-green'>
                 Color Compass

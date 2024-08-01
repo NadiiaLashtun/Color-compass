@@ -30,6 +30,8 @@ export default {
 
       dropShadow: {
         link: "0 0 10px rgba(230, 111, 116, 0.5)",
+        title: "-2px 1px 2px rgba(255, 255, 255, 1)",
+        icon: "0 0 6px #EBC0C1",
       },
 
       boxShadow: {

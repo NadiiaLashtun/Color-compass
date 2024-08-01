@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Wrapper from "./Wrapper";
-import ColorPicker from "../components/ColorPicker";
-import InputForm from "../components/InputForm";
-import TextArea from "../components/TextArea";
+import Wrapper from "../UI/Wrapper";
+import ColorPicker from "../picker/ColorPicker";
+import InputForm from "../picker/InputForm";
+import TextArea from "../picker/TextArea";
 
 //Screen size determination
 function useResize() {
@@ -66,8 +66,8 @@ function InputSection({
 
   return (
     <main>
-      <section className='bg-input-page bg-cover bg-center w-full h-full lg:h-[calc(100vh-60px)] py-12 lg:py-0 border-y border-secondary-color animate-slideIn flex items-center'>
-        <div className='relative h-[80%] w-full flex items-center gap-9 text-sm xl:text-base text-center text-primary-dark'>
+      <section className='bg-input-page bg-cover bg-center w-full h-full lg:h-[calc(100vh-60px)] py-16 lg:py-0 animate-slideIn flex items-center'>
+        <div className='relative h-[80%] w-full flex items-center gap-9'>
           <Wrapper>
             <div className='absolute inset-0 top-8 bg-custom-mobile-gradient lg:bg-custom-gradient'></div>
             <div className='flex flex-wrap items-center'>
