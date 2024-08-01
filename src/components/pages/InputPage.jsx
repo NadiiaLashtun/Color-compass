@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Wrapper from "../Wrapper";
-import ColorPicker from "../ColorPicker";
-import InputForm from "../InputForm";
-import TextArea from "../TextArea";
+import Wrapper from "../UI/Wrapper";
+import ColorPicker from "../picker/ColorPicker";
+import InputForm from "../picker/InputForm";
+import TextArea from "../picker/TextArea";
 
 //Screen size determination
 function useResize() {

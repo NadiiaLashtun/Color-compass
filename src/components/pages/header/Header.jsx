@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Wrapper from "./Wrapper";
+import Wrapper from "../../UI/Wrapper";
 import MobileMenu from "./MobileMenu";
 import NavItem from "./NavItem";
-import Logo from "../img/logo.svg";
+import Logo from "/src/img/logo.svg";
 import Burger from "/src/img/menu-button.svg";
 import Close from "/src/img/close-button.svg";
 

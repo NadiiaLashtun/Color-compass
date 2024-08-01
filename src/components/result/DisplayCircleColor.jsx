@@ -1,4 +1,4 @@
-import { setContrastText } from "../utils/setContrastText";
+import { setContrastText } from "../../utils/setContrastText";
 
 function DisplayCircleColour({ hex }) {
   return (

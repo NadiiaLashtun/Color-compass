@@ -3,14 +3,12 @@ import Groq, { NotFoundError } from "groq-sdk";
 import { useState, useMemo, useEffect, useRef } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import extractJSON from "./utils/extractJson";
-import ColorPicker from "./components/ColorPicker";
-import InputForm from "./components/InputForm";
-import Header from "./components/Header";
+import Header from "./components/pages/header/Header";
 import HeroPage from "./components/pages/HeroPage";
 import InputPage from "./components/pages/InputPage";
 import ResultsPage from "./components/pages/ResultsPage";
-import Footer from "./components/Footer";
-import ScrollButton from "./components/ScrollButton";
+import ScrollButton from "./components/UI/ScrollButton";
+import Footer from "./components/pages/footer/Footer";
 
 const groq = new Groq({
   apiKey: import.meta.env.VITE_GROQ_API_KEY,

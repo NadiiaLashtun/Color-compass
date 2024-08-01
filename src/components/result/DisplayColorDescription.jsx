@@ -1,4 +1,4 @@
-function DisplayColours({ color }) {
+function DisplayColourDescription({ color }) {
   return (
     <div className='flex flex-col sm:flex-row gap-4'>
       <div className='text-brand-light-green w-full sm:w-1/5 text-center sm:text-left font-semibold'>
@@ -11,4 +11,4 @@ function DisplayColours({ color }) {
   );
 }
 
-export default DisplayColours;
+export default DisplayColourDescription;

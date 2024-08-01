@@ -1,7 +1,7 @@
 import React from "react";
-import Wrapper from "./Wrapper";
+import Wrapper from "../../UI/Wrapper";
 import FooterVoyagerList from "./FooterVoyagerList";
-import { TEAMLIST } from "./data/team.js";
+import { TEAMLIST } from "../../../data/team";
 
 function Footer() {
   return (

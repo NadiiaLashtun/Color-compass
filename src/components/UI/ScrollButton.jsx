@@ -10,7 +10,7 @@ function ScrollButton() {
 
   const goBack = () => {
     if (currentPageIndex > 0) {
-      navigate(-1);
+      navigate(routes[currentPageIndex - 1]);
     }
   };
 
@@ -23,21 +23,23 @@ function ScrollButton() {
   };
 
   return (
-    <div className='relative flex justify-center space-x-16 cursor-pointer'>
-      <button
-        onClick={goBack}
-        className={`absolute bottom-9 w-4 h-4 bg-primary-white border border-brand-green border-opacity-40 rounded-full shadow-shape transition-all duration-300 hover:bg-primary-color hover:border-brand-red hover:border-opacity-40'
+    <div className='relative'>
+      <div className='absolute bottom-8 left-1/2 -translate-x-1/2 space-x-4 cursor-pointer'>
+        <button
+          onClick={goBack}
+          className={`w-4 h-4 bg-primary-white border border-brand-green border-opacity-40 rounded-full shadow-shape transition-all duration-300 hover:bg-primary-color hover:border-brand-red hover:border-opacity-40'
           ${currentPageIndex <= 0 ? "opacity-50 cursor-not-allowed" : ""}`}
-      ></button>
-      <button
-        onClick={goForward}
-        className={`absolute bottom-9 w-4 h-4 bg-primary-white border border-brand-green border-opacity-40 rounded-full shadow-shape transition-all duration-300 hover:bg-primary-color hover:border-brand-red hover:border-opacity-40 
+        ></button>
+        <button
+          onClick={goForward}
+          className={`w-4 h-4 bg-primary-white border border-brand-green border-opacity-40 rounded-full shadow-shape transition-all duration-300 hover:bg-primary-color hover:border-brand-red hover:border-opacity-40 
           ${
             currentPageIndex >= routes.length - 2
               ? "opacity-50 cursor-not-allowed"
               : ""
           }`}
-      ></button>
+        ></button>
+      </div>
     </div>
   );
 }

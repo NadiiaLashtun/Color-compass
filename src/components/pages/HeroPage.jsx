@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Wrapper from "../Wrapper";
+import Wrapper from "../UI/Wrapper";
 import CompassArrow from "/src/img/compass-arrow.svg";
 import CompassCircle from "/src/img/compass-circle.svg";
 
