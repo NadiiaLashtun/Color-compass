@@ -2,27 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "IslandMoments";
-  src: url("../src/fonts/IslandMoments-Regular.ttf") format("truetype");
-}
+@layer base {
+  @font-face {
+    font-family: "IslandMoments";
+    src: url("../src/fonts/IslandMoments-Regular.ttf") format("truetype");
+  }
 
-@font-face {
-  font-family: "OpenSans-Regular";
-  src: url("../src/fonts/OpenSans-Regular.ttf") format("truetype");
-  font-weight: 400;
-}
+  @font-face {
+    font-family: "OpenSans-Regular";
+    src: url("../src/fonts/OpenSans-Regular.ttf") format("truetype");
+    font-weight: 400;
+  }
 
-@font-face {
-  font-family: "OpenSans-SemiBold";
-  src: url("../src/fonts/OpenSans-SemiBold.ttf") format("truetype");
-  font-weight: 600;
-}
+  @font-face {
+    font-family: "OpenSans-SemiBold";
+    src: url("../src/fonts/OpenSans-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+  }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  body {
+    @apply m-0 p-0 box-border font-display text-sm md:text-base text-center text-primary-dark;
+  }
+
+  h2 {
+    @apply -translate-x-1/2 font-caption text-3xl sm:text-4xl md:text-5xl xl:text-6xl text-brand-red drop-shadow-title;
+  }
 }
 
 /*.results-title {

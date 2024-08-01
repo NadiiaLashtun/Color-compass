@@ -13,10 +13,11 @@ function TextArea({
     const { r, g, b } = rgbColor;
 
     return (
-      <span className='text-black-600'>
-        <span className='text-red-600'> {r}</span>
-        <span className='text-green-600'> {g}</span>
-        <span className='text-blue-600'> {b}</span>
+      <span>
+        rgb(
+        <span className='text-brand-red'>{r}</span>,
+        <span className='text-brand-light-green'> {g}</span>,
+        <span className='text-secondary-color'> {b}</span>)
       </span>
     );
   };
@@ -25,17 +26,18 @@ function TextArea({
     const { h, s, l } = hslColor;
 
     return (
-      <span className='text-black'>
-        <span className='text-purple-600'>{h}</span>,
-        <span className='text-green-600'> {s}%</span>,
-        <span className='text-orange-600'> {l}%</span>
+      <span>
+        hsl(
+        <span className='text-secondary-color'>{h}</span>,
+        <span className='text-brand-light-green'> {s}%</span>,
+        <span className='text-brand-red'> {l}%</span>)
       </span>
     );
   };
 
   return (
     <>
-      <h2 className='absolute -top-9 lg:-top-2 xl:-top-4 left-[50%] lg:left-[72%] -translate-x-1/2 font-caption text-3xl sm:text-4xl md:text-5xl xl:text-6xl text-brand-red'>
+      <h2 className='absolute -top-9 lg:-top-2 xl:-top-4 left-[50%] lg:left-[72%]'>
         Choose your color
       </h2>
 
@@ -44,15 +46,13 @@ function TextArea({
         mattis tortor ut tortor cursus, ac maximus tortor.
       </p>
 
-      <div className='pb-3 xl:pb-9'>
+      <div className='pb-3 xl:pb-9 text-brand-green'>
+        <p>HEX: {hexColor}</p>
         <p>
-          <u>HEX:</u> {hexColor}
+          RGB: <RGBColor rgbColor={rgbColor} />
         </p>
         <p>
-          <u>RGB:</u> <RGBColor rgbColor={rgbColor} />
-        </p>
-        <p>
-          <u>HSL:</u> <HSLColor hslColor={hslColor} />
+          HSL: <HSLColor hslColor={hslColor} />
         </p>
       </div>
 

@@ -5,7 +5,7 @@ import { TEAMLIST } from "../../../data/team";
 
 function Footer() {
   return (
-    <footer className='bg-primary-white'>
+    <footer className='bg-primary-white border-t border-secondary-color'>
       <div className='flex justify-center flex-wrap p-4 text-primary-dark'>
         Check out our team's
         <a
