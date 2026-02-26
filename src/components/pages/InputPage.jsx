@@ -64,16 +64,35 @@ function InputSection({
     options.width = 330;
   }
 
+  let [itemColor1, setItemColor1] = useState();
+  let [itemColor2, setItemColor2] = useState();
+
   return (
     <main>
       <section className='bg-input-page bg-cover bg-center w-full h-full lg:h-[calc(100vh-60px)] py-16 lg:py-0 animate-slideIn flex items-center'>
         <div className='relative h-[80%] w-full flex items-center gap-9'>
           <Wrapper>
-            <div className='absolute inset-0 top-8 bg-custom-mobile-gradient lg:bg-custom-gradient'></div>
+            <div
+              style={{
+                // background: `linear-gradient(to right, ${itemColor1} 0%, ${hexColor} 20%, ${itemColor2} 38%, #ffffff 50%, #ffffff 100%)`,
+                background: `linear-gradient(to right, ${hexColor} 0%, #E66F74 20%, #EBC0C1 38%, #ffffff 50%, #ffffff 100%)`,
+              }}
+              className='absolute inset-0 top-8 bg-custom-mobile-gradient lg:bg-custom-gradient'
+            ></div>
             <div className='flex flex-wrap items-center'>
               <div className='z-10 lg:w-1/2 flex flex-col items-center w-full'>
-                <ColorPicker options={options} setters={setters} />
-                <InputForm hexColor={hexColor} />
+                <ColorPicker
+                  options={options}
+                  setters={setters}
+                />
+                <InputForm
+                  hexColor={hexColor}
+                  hslColor={hslColor}
+                  onColorsChange={(c1, c2) => {
+                    setItemColor1(c1);
+                    setItemColor2(c2);
+                  }}
+                />
               </div>
               <div className='z-10 lg:w-1/2 flex flex-col gap-2'>
                 <TextArea

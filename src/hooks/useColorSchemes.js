@@ -2,10 +2,10 @@ import { useState, useMemo, useEffect, useRef } from "react";
 import groq from "../api/groqClient";
 import extractJSON from "../utils/extractJson";
 
-export function useColorScheme(defaultHex = "#f00") {
+export function useColorScheme(defaultHex = "#8E216E") {
   const [hexColor, setHexColor] = useState(defaultHex);
-  const [rgbColor, setRgbColor] = useState({ r: 255, g: 0, b: 0 });
-  const [hslColor, setHslColor] = useState({ h: 0, s: 100, l: 50 });
+  const [rgbColor, setRgbColor] = useState({ r: 142, g: 33, b: 110 });
+  const [hslColor, setHslColor] = useState({ h: 318, s: 62, l: 34 });
   const [usageEmpty, setUsageEmpty] = useState(false);
   const [trigger, setTrigger] = useState(false);
   const [buttonClicked, setButtonClicked] = useState(false);
