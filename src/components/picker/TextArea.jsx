@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 function TextArea({
   handleClick,
@@ -42,8 +42,12 @@ function TextArea({
       </h2>
 
       <p className='w-[80%] mx-auto my-auto pt-9 lg:pt-5'>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-        mattis tortor ut tortor cursus, ac maximus tortor.
+        1. Pick your main color and generate perfect combinations with
+        complementary, triadic, or analogous palettes.
+        {/* 1. Pick your main color and generate perfect color combinations using
+        complementary, triadic or analogous palettes */}
+        {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+        mattis tortor ut tortor cursus, ac maximus tortor. */}
       </p>
 
       <div className='pb-3 xl:pb-9 text-brand-green'>
@@ -57,10 +61,16 @@ function TextArea({
       </div>
 
       <label
-        className='block text-base font-semibold w-3/4 mx-auto'
+        className='block text-base w-3/4 mx-auto'
         htmlFor='usage'
       >
-        Describe where do you plan to use this color?
+        2. AI crafts your perfect palette.
+        {/* 2. AI could crafts the perfect palette for you */}
+        <br />
+        <span className='font-semibold'>
+          Describe how you’ll use the color and get inspired.
+          {/* Describe where do you plan to use this color and get ideas */}
+        </span>
       </label>
       <textarea
         id='usage'

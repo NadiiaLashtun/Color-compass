@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
-import Wrapper from "../UI/Wrapper";
-import CompassArrow from "/src/img/compass-arrow.svg";
-import CompassCircle from "/src/img/compass-circle.svg";
+import { Link } from 'react-router-dom';
+import Wrapper from '../UI/Wrapper';
+import CompassArrow from '/src/img/compass-arrow.svg';
+import CompassCircle from '/src/img/compass-circle.svg';
 
 function MainSection() {
   return (
@@ -9,14 +9,14 @@ function MainSection() {
       <section className='bg-main-page bg-cover bg-center w-full h-[calc(100vh-60px)]  animate-slideIn'>
         <Wrapper>
           <div className='relative h-[calc(100vh-60px)] flex justify-center items-center'>
-            <div className=' flex flex-col items-center space-y-1'>
-              <p>Lorem ipsum</p>
+            <div className=' flex flex-col items-center space-y-3'>
+              <p>Your world, your colors</p>
               <h1 className='font-caption text-6xl md:text-8xl lg:text-[110px] text-brand-light-green'>
                 Color Compass
               </h1>
               <p className='w-2/3 md:w-[460px]'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus mattis tortor ut tortor cursus, ac maximus tortor.
+                Discover endless palettes and mix vibrant shades to craft your
+                perfect and unique visual experience today
               </p>
               <Link
                 to='/input'
@@ -28,7 +28,10 @@ function MainSection() {
                     src={CompassArrow}
                     alt='CompassArrow'
                   />
-                  <img src={CompassCircle} alt='CompassCircle' />
+                  <img
+                    src={CompassCircle}
+                    alt='CompassCircle'
+                  />
                 </div>
               </Link>
             </div>
