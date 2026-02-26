@@ -44,10 +44,6 @@ function TextArea({
       <p className='w-[80%] mx-auto my-auto pt-9 lg:pt-5'>
         1. Pick your main color and generate perfect combinations with
         complementary, triadic, or analogous palettes.
-        {/* 1. Pick your main color and generate perfect color combinations using
-        complementary, triadic or analogous palettes */}
-        {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-        mattis tortor ut tortor cursus, ac maximus tortor. */}
       </p>
 
       <div className='pb-3 xl:pb-9 text-brand-green'>
@@ -65,11 +61,9 @@ function TextArea({
         htmlFor='usage'
       >
         2. AI crafts your perfect palette.
-        {/* 2. AI could crafts the perfect palette for you */}
         <br />
         <span className='font-semibold'>
           Describe how you’ll use the color and get inspired.
-          {/* Describe where do you plan to use this color and get ideas */}
         </span>
       </label>
       <textarea
